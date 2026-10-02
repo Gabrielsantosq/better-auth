@@ -6,11 +6,16 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "format": "turbo format",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "db:generate": "bunx --bun drizzle-kit generate",
+    "db:migrate": "bunx --bun drizzle-kit migrate"
   },
   "devDependencies": {
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^1.0.0-rc.4",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
+    "tsx": "^4.23.15",
     "turbo": "^2.9.18",
     "typescript": "^6"
   },
@@ -21,5 +26,13 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "^1.7.6",
+    "better-auth": "^1.7.6",
+    "dotenv": "^18.0.4",
+    "drizzle-orm": "^1.0.0-rc.4",
+    "pg": "^8.23.0",
+    "resend": "^6.32.0"
+  }
 }

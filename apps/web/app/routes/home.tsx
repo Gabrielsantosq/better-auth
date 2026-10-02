@@ -1,4 +1,5 @@
 import { Button } from "@workspace/ui/components/button"
+import DeletUser from "../../components/delet-user"
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
           <p>You may now add components and start building.</p>
           <p>We&apos;ve already added the button component for you.</p>
           <Button className="mt-2">Button</Button>
+          <DeletUser/>
         </div>
       </div>
     </div>
