@@ -1,11 +1,8 @@
 import { Button } from "@workspace/ui/components/button";
 import { Form} from "react-router";
 import { authClient } from "@/lib/auth-client";
-import { Input } from "@workspace/ui/components/input";
-import { useState } from "react";
-export default function DeletUser() {
 
-  const [password, setPassword] = useState("")
+export default function DeletUser() {
 
   const delet = async () => {
     await authClient.deleteUser({
@@ -13,12 +10,9 @@ export default function DeletUser() {
       callbackURL: "/goodbye",
     })
   }
-
-
   return (
     <div>
       <Form onSubmit={delet}>
-
         <Button type="submit">
           DELETAR
         </Button>

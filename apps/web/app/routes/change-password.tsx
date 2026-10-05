@@ -7,7 +7,6 @@ import { Button } from "@workspace/ui/components/button"
 
 import {
   Field,
-  FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator

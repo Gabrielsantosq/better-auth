@@ -3,7 +3,7 @@ import { useState } from "react"
 import { authClient } from "@/lib/auth-client"
 import { Input } from "@workspace/ui/components/input"
 import { Button } from "@workspace/ui/components/button"
-
+import success from "./sucesso"
 import {
   Field,
   FieldDescription,
@@ -35,10 +35,10 @@ export default function SignIn() {
       },
       {
         onRequest: (ctx) => {
-          console.log("request", ctx.onRequest)
+
         },
         onSuccess: (ctx) => {
-          navigate("/home")
+          navigate("/")
           console.log("funcionou")
 
         },
@@ -76,7 +76,7 @@ export default function SignIn() {
                   <Field>
                     <div className="flex items-center">
                       <FieldLabel htmlFor="password">Password</FieldLabel>
-                      <Link to={"#"} className="ml-auto inline-block text-sm underline-offset-4 hover:underline">
+                      <Link to={"/request-password"} className="ml-auto inline-block text-sm underline-offset-4 hover:underline">
                         Esqueceu sua senha?
                       </Link>
                     </div>
@@ -93,7 +93,7 @@ export default function SignIn() {
                   <Field>
                     <Button type="submit">Login</Button>
                     <FieldDescription>
-                      Não tenho uma conta <Link to={"#"}>Sign up</Link>
+                      Não tenho uma conta <Link to={"/sign-up"}>Sign up</Link>
                     </FieldDescription>
                   </Field>
                 </FieldGroup>
@@ -104,7 +104,5 @@ export default function SignIn() {
       </div>
 
     </div>
-
   )
-
 }

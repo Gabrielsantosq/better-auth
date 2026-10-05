@@ -7,7 +7,6 @@ import { Button } from "@workspace/ui/components/button"
 
 import {
   Field,
-  FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator
@@ -68,6 +67,7 @@ export default function RequestPassword(){
                     required
                   />
                 </Field>
+                <FieldSeparator/>
                 <Field>
                   <Button type="submit">
                     Reset

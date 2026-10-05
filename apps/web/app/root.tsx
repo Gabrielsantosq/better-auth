@@ -1,5 +1,6 @@
 import {
   Links,
+  Link,
   Meta,
   Outlet,
   Scripts,
@@ -20,6 +21,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+
+        <nav className="flex items-center justify-between border-b px-6 py-4">
+
+          <div className="font-semibold text-lg">
+            Better Auth
+          </div>
+
+          <div className="flex items-center gap-6 text-sm font-medium ">
+            <Link to="/" className="hover:text-blue-500">Inicio</Link>
+            <Link to="/sign-in" className="hover:text-blue-500">Entrar</Link>
+            <Link
+              to="/sign-up"
+              className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+            >
+              Criar Conta
+            </Link>
+          </div>
+
+        </nav>
+
         {children}
         <ScrollRestoration />
         <Scripts />
